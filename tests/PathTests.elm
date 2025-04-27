@@ -1,10 +1,8 @@
-module PathTests exposing (..)
+module PathTests exposing (suite)
 
-import Expect exposing (Expectation)
-import Fuzz exposing (Fuzzer, int, list, string)
+import Expect
 import Path
-import Sitemap
-import Test exposing (..)
+import Test exposing (Test, describe, test)
 
 
 suite : Test
