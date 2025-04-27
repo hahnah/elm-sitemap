@@ -53,6 +53,7 @@ build { siteUrl } urls =
         |> encode 0
 
 
+urlXml : String -> Entry -> Xml.Value
 urlXml siteUrl entry =
     object
         [ ( "url"
