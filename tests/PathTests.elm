@@ -26,4 +26,12 @@ suite =
             \() ->
                 Path.join [ "https://example.com/", "/about" ]
                     |> Expect.equal "https://example.com/about"
+        , test "append absolute url to base" <|
+            \() ->
+                Path.join [ "https://example.com", "/about" ]
+                    |> Expect.equal "https://example.com/about"
+        , test "append absolute url with trailing slash to base" <|
+            \() ->
+                Path.join [ "https://example.com", "/about/" ]
+                    |> Expect.equal "https://example.com/about/"
         ]
