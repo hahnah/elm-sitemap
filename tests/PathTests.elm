@@ -1,10 +1,8 @@
-module PathTests exposing (..)
+module PathTests exposing (suite)
 
-import Expect exposing (Expectation)
-import Fuzz exposing (Fuzzer, int, list, string)
+import Expect
 import Path
-import Sitemap
-import Test exposing (..)
+import Test exposing (Test, describe, test)
 
 
 suite : Test
@@ -26,4 +24,12 @@ suite =
             \() ->
                 Path.join [ "https://example.com/", "/about" ]
                     |> Expect.equal "https://example.com/about"
+        , test "append absolute url to base" <|
+            \() ->
+                Path.join [ "https://example.com", "/about" ]
+                    |> Expect.equal "https://example.com/about"
+        , test "append absolute url with trailing slash to base" <|
+            \() ->
+                Path.join [ "https://example.com", "/about/" ]
+                    |> Expect.equal "https://example.com/about/"
         ]
