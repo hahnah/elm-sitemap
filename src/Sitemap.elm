@@ -14,6 +14,12 @@ flag your site as spam.
 
 Here's another reference with more best practices: <https://support.google.com/webmasters/answer/183668?hl=en>
 
+NOTE:
+This library is a sitemap builder forked from dillonkearns/elm-sitemap, and resolves following issues original one has:
+<https://github.com/dillonkearns/elm-sitemap/issues/6>
+
+hahnah/elm-sitemap handle trailsing slashes in URLs as is provided. This is important in some cases for being referenced by Google Search Console and being indexed by Google Search.
+
 @docs Entry, build
 
 -}
